@@ -6,8 +6,8 @@ apply plugin: 'application'
 
 mainClassName = 'com.pingcap.hibernate.Example'
 
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+//task stage(dependsOn: ['build', 'clean'])
+//build.mustRunAfter clean
 
 repositories {
     mavenCentral()
