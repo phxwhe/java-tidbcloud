@@ -9,6 +9,13 @@ mainClassName = 'com.pingcap.hibernate.Example'
 //task stage(dependsOn: ['build', 'clean'])
 //build.mustRunAfter clean
 
+task copyToLib(type: Copy) {
+    into "$buildDir/libs"
+    from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
+
 repositories {
     mavenCentral()
 }
